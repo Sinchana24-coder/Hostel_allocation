@@ -1,0 +1,14 @@
+The Hostel Allocation helps to allocate students to particular boys and girls hostels based on number of students appear in the college. 
+
+Objective: Develop a web application to facilitate digitalizing the hospitality process for group
+accommodation. The application should allow users to upload two CSV files to efficiently
+allocate rooms in hostels while ensuring group members with the same ID stay together and
+adhere to hostel capacities and gender-specific accommodations.
+
+Frontend Requirements:
+● User-friendly interface to upload two CSV files.
+● An algorithm to allocate rooms based on the following criteria:
+○ Members of the same group (same ID) should stay in the same room as much as
+possible.
+○ Boys and girls should stay in their respective hostels.
+○ Room capacity should not be exceeded
