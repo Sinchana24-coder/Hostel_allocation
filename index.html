@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room Allocation</title>
+    <style>
+        body {
+               align: center;
+               padding: 100px;
+               background: url("/static/login.jpg");
+               background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+
+              }
+
+    </style>
+</head>
+<body>
+    <h1 style = "text-align: center; font-size: 40px; color: white;">Upload Group and Hostel Information</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data" style = "text-align: center; background-color: pink; padding: 30px; margin: 10px;">
+        <label for="file1" style = "text-align: center; font-size: 20px;">Group Information CSV:</label>
+        <input type="file" id="file1" name="file1" style = "text-align: center; font-size: 20px;" required><br><br>
+        <label for="file2" style = "text-align: center; font-size: 20px;">Hostel Information CSV:</label>
+        <input type="file" id="file2" name="file2" style = "text-align: center; font-size: 20px;" required><br><br>
+        <button type="submit" style = "text-align: center; font-size: 20px;">Upload and Allocate</button>
+    </form>
+</body>
+</html>

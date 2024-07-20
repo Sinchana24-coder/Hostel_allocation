@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room Allocation Results</title>
+    <style>
+        body {
+           align: center;
+           background-color: pink;
+
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center; color: green;">Room Allocation Results</h1>
+    <table border="1" style="padding: 100px; margin-left: 450px; padding-bottom: 100px; background: lightblue; ">
+        <thead>
+            <tr>
+                <th>Group ID</th>
+                <th>Hostel Name</th>
+                <th>Room Number</th>
+                <th>Members Allocated</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in result %}
+            <tr>
+                <td>{{ item.GroupID }}</td>
+                <td>{{ item.HostelName }}</td>
+                <td>{{ item.RoomNumber }}</td>
+                <td>{{ item.MembersAllocated }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <br>
+    <a href="{{ url_for('download_file', csv_file=csv_file) }}" style="margin: 700px;">Download CSV</a>
+</body>
+</html>
+
+
+<!--
+101, 3, Boys
+102, 4, Girls
+103, 2, Boys
+104, 5, Girls
+105, 8, 5 Boys & 3 Girls
+-->
+
+<!--
+Boys Hostel A, 101, 3, Boys
+Boys Hostel A, 102, 4, Boys
+Girls Hostel A, 201, 2, Girls
+Girls Hostel B, 202, 5, Girls
+-->
